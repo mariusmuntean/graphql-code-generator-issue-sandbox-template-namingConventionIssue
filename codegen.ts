@@ -4,7 +4,13 @@ const config: CodegenConfig = {
   schema: "schema.graphql",
   documents: "document.graphql",
   generates: {
-    "types.ts": { plugins: ["typescript", "typescript-operations"] },
+    "Types.cs": 
+    { 
+      plugins: ["c-sharp"],
+      config: {
+        namingConvention: 'change-case-all#pascalCase',
+      }
+    },
   },
 };
 
